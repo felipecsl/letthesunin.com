@@ -80,13 +80,32 @@ td { vertical-align: top; }
   .main {
     width: 950px;
     margin: 0 auto;
-    padding-top: 205px;
+    &.content {
+      position: relative;
+      padding-top: 205px;
+    }
     .scramble {
       width: 770px;
       margin: 0 auto;
       img {
         cursor: pointer;
         margin-right: 5px;
+      }
+    }
+  }
+  .progress {
+    position: absolute;
+    right: 30px;
+    top: 150px;
+
+    .circle {
+      width: 10px;
+      height: 10px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      border: 3px solid white;
+      &.full {
+        background-color: white;
       }
     }
   }
@@ -110,6 +129,44 @@ td { vertical-align: top; }
     right: 0;
     background: url(/images/footer.png) top center no-repeat;
 
+    #about_time {
+      float: left;
+      position: relative;
+      top: 80px;
+      left: 25px;
+      color: #0079c2;
+      font-size: 25px;
+      font-family: Helvetica;
+    }
+    #sunrise {
+      text-shadow: -1px -1px #338AAC;
+      position: relative;
+      top: 75px;
+      float: right;
+      color: white;
+      right: 0;
+      p {
+        font-size: 25px;
+        margin: 0;
+        text-indent: 10px;
+      }
+      div {
+        float: left;
+        width: 55px;
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        border-right: 1px solid white;
+        padding: 0 7px;
+        &:last-child {
+          border-right: 0 none;
+        }
+        span {
+          font-size: 40px;
+          line-height: 40px;
+        }
+      }
+    }
     #wake_up {
       p { 
         font-size: 30px;
@@ -119,6 +176,8 @@ td { vertical-align: top; }
         margin-right: 15px;
       }
       a {
+        box-shadow: 0 1px #549423;
+        text-shadow: 0 1px #3F6124;
         background-color: #7BC143;
         border-radius: 10px;
         padding: 7px 13px;
@@ -129,12 +188,12 @@ td { vertical-align: top; }
         float: right;
       }
       padding: 15px;
-      width: 550px;
+      width: 560px;
       overflow: auto;
       color: #f1602f;
       position: relative;
       left: 50%;
-      margin-left: -275px;
+      margin-left: -280px;
       top: -55px;
       border-radius: 10px;
       box-shadow: 0 3px 3px #555;

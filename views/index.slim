@@ -16,8 +16,8 @@ html class="no-js" lang="en"
       br/
       | wires will give way to worldwide...
     .mobility
-      div.main role="main"
-        /.tip
+      .main.content role="main"
+        /.tip        
         .scramble title='Rearrange the letters with your<br/> cursor to complete the sentence.'
           img src='/images/o.png' 
           img src='/images/b.png' 
@@ -26,11 +26,38 @@ html class="no-js" lang="en"
           img src='/images/m.png' 
           img src='/images/i.png' 
           img src='/images/y.png' 
-          img src='/images/t.png' 
+          img src='/images/t.png'
+        .progress
+          .circle.full
+          .circle
+          .circle
+          .circle
+          .circle
+          .circle
+          .circle
+          .circle
     #footer
       #wake_up
         p Wake me up for the sunrise
         a href="#" Click Here &#x25b6;
+      .main
+        #about_time
+          | It's about 
+          strong time.
+        #sunrise
+          p The Sun Will Rise In:
+          .days 
+            span 34 
+            | days
+          .hours 
+            span 10 
+            | hrs
+          .min 
+            span 20 
+            | min
+          .sec 
+            span 05 
+            | sec
     
     footer
 
