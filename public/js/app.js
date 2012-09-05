@@ -28,5 +28,40 @@ $(function() {
     classname: 'tip'
   });
 
+  $(window).scroll(userScrolledThePage);
+
   $('.scramble').mouseenter();
 });
+
+function userScrolledThePage() {
+  var scrollTop = $('body').scrollTop() + $('#topmsg').height();
+  var targetIndex = 0;
+
+  $('.circle').removeClass('full');
+
+  if(scrollTop > $('.time').offset().top) {
+    targetIndex = 6;
+  }
+  else if(scrollTop > $('.cloud').offset().top) {
+    targetIndex = 5;
+  }
+  else if(scrollTop > $('.optimized').offset().top) {
+    targetIndex = 4;
+  }
+  else if(scrollTop > $('.collaboration').offset().top) {
+    targetIndex = 3;
+  }
+  else if(scrollTop > $('.social').offset().top) {
+    targetIndex = 2;
+  }
+  else if(scrollTop > $('.context').offset().top) {
+    targetIndex = 1;
+  }
+  else if(scrollTop > $('.mobility').offset().top) {
+    targetIndex = 0;
+  }
+
+  var target = $('.circle')[targetIndex];
+
+  $(target).addClass('full');
+}
