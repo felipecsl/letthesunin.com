@@ -280,6 +280,19 @@ body {
   height: 1001px;
 }
 
+.transp_message {
+  background: url(/images/transp_bg.png) top center no-repeat;
+  width: 719px;
+  height: 119px;
+  margin: 10px auto;
+  display: none;
+  padding: 15px 30px;
+  color: white;
+  font-size: 24px;
+  line-height: 30px;
+  text-shadow: 0 1px 1px #4D4D4D;
+}
+
 .form{ 
   background: url(/images/form.png) top center no-repeat;
   height: 608px;

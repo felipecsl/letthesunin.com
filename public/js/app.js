@@ -1,7 +1,9 @@
 var isAnimating = false;
 
 $(function() {
-  $(".scramble").sortable();
+  $(".scramble").sortable({
+     update: onWordSorted
+  });
   $(".scramble img").disableSelection();
   
   $('.mobility_scramble, .cloud_scramble').balloon({ 
@@ -34,6 +36,32 @@ $(function() {
 
   $('.scramble').mouseenter();
 });
+
+function onWordSorted(event, ui) {
+  var scramble = $(this);
+  var images = scramble.find("img");
+  var indexes = _.map(images, function(img) {
+    var indxs = $(img).data("index").toString().split(',');
+    
+    return _.map(indxs, function(i) { return parseInt(i); });
+  });
+
+  if(isOrdered(indexes)) {
+    $('#' + scramble.data('message')).show();
+  }
+  else {
+   $('#' + scramble.data('message')).hide(); 
+  }
+}
+
+function isOrdered(array) {
+  for(var i = 0; i < array.length; i++) {
+    if(_.all(array[i], function(itm) { return itm != i; })) {
+      return false;
+    }
+  }
+  return true;
+}
 
 function userScrolledThePage() {
   var scrollTop = $('body').scrollTop() + $('#topmsg').height();
