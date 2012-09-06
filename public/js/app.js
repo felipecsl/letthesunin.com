@@ -64,13 +64,14 @@ function isOrdered(array) {
 }
 
 function userScrolledThePage() {
+  var pageBottom = 5500;
   var scrollTop = $('body').scrollTop() + $('#topmsg').height();
   var targetIndex = 0;
   var isLastImage = false;
 
   $('.circle').removeClass('full');
 
-  if(scrollTop > $('.form').offset().top) {
+  if($('body').scrollTop() > pageBottom || scrollTop > $('.form').offset().top) {
     targetIndex = 7;
     isLastImage = true;
   }
@@ -101,7 +102,7 @@ function userScrolledThePage() {
 
     var bottomDistance;
     if(isLastImage) {
-      bottomDistance = '-300px';
+      bottomDistance = '-400px';
     }
     else {
       bottomDistance = '0px';
