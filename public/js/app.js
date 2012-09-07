@@ -11,6 +11,10 @@ $(function() {
     $('body').animate({ scrollTop: offset }, 300);
   });
 
+  $(".btnWakeUp").click(function() {
+    $('.circle:last').click();
+  });
+
   $(".arrow").click(function() {
     $('.circle.full').next().click();
   });
