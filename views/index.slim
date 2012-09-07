@@ -106,21 +106,24 @@ html class="no-js" lang="en"
       .main
         form action="http://info.toatech.com/Default.aspx?app=iframeform&amp;hidemenu=true&amp;ContactFormID=145605" method="post"
           input type="hidden" name="FormSubmitRedirectURL" id="FormSubmitRedirectURL" value="http://www.letthesunin.com"
+          input type="hidden" name="Lead_Src" id="LeadSrc" value="WEB-LP-Dreamforce-2012"
+          input type='hidden' id='LeadGen_ContactForm_145605_m0spam_check_key' name='LeadGen_ContactForm_145605_m0spam_check_key'  value='qqokhlkkgkddidiggqlqgdjleigpkrmrpleojgioiimfppchnjmgdsgechiu'
+          input type='hidden' id='LeadGen_ContactForm_145605_m0spam_check_sig' name='LeadGen_ContactForm_145605_m0spam_check_sig'  value='' />
           .form_line
             .form_field.margin
               label for="LeadGen_ContactForm_145605_m0:FirstName" First Name
               input type="text" name="LeadGen_ContactForm_145605_m0:FirstName" value=""
             .form_field
-              label for="LeadGen_ContactForm_145605_m0:FirstName" Last Name
+              label for="LeadGen_ContactForm_145605_m0:LastName" Last Name
               input type="text" name="LeadGen_ContactForm_145605_m0:LastName" value=""
           .form_line
             .form_field.margin
-              label for="LeadGen_ContactForm_145605_m0:FirstName" Company
+              label for="LeadGen_ContactForm_145605_m0:Company" Company
               input type="text" name="LeadGen_ContactForm_145605_m0:Company" value=""
             .form_field
-              label for="LeadGen_ContactForm_145605_m0:FirstName" Email
+              label for="LeadGen_ContactForm_145605_m0:Email" Email
               input type="text" name="LeadGen_ContactForm_145605_m0:Email" value=""
-          input.submit type="submit" value="Submit &#x25b6;" 
+          input.submit type="submit" value="Submit &#x25b6;" onclick='return HubSpotFormSpamCheck_LeadGen_ContactForm_145605_m0();'
     .progress
       .circle.full data-target=".mobility"
       .circle data-target=".context"
@@ -162,6 +165,24 @@ html class="no-js" lang="en"
     script src="/js/jquery.balloon.min.js"
     script src="/js/underscore-min.js"
     script src="/js/app.js"
+    script
+      |
+        HubSpotFormSpamCheck_LeadGen_ContactForm_145605_m0 = function() {
+           var key = document.getElementById('LeadGen_ContactForm_145605_m0spam_check_key').value;
+         var sig = '';
+         for (var x = 0; x< key.length; x++ ) {
+            sig += key.charCodeAt(x)+13;
+         }
+         document.getElementById('LeadGen_ContactForm_145605_m0spam_check_sig').value = sig; 
+           /* Set the hidden field to contain the user token */
+           var results = document.cookie.match ( '(^|;) ?hubspotutk=([^;]*)(;|$)' );
+            if (results && results[2]) {
+                document.getElementById('LeadGen_ContactForm_145605_m0submitter_user_token').value =  results[2];
+            } else if (window['hsut']) {
+                document.getElementById('LeadGen_ContactForm_145605_m0submitter_user_token').value = window['hsut'];
+          }
+            return true;
+        };
 
     script
       |
