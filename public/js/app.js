@@ -5,6 +5,8 @@ $(function() {
      update: onWordSorted
   });
 
+  setInterval(countDown, 1000);
+
   $('.circle').click(function() {
     var targetSelector = $(this).data('target');
     var offset = $(targetSelector).offset().top;
@@ -62,10 +64,10 @@ function onWordSorted(event, ui) {
   });
 
   if(isOrdered(indexes)) {
-    $('#' + scramble.data('message')).show();
+    $('#' + scramble.data('message')).fadeIn();
   }
   else {
-   $('#' + scramble.data('message')).hide(); 
+   $('#' + scramble.data('message')).fadeOut(); 
   }
 }
 
@@ -134,4 +136,19 @@ function userScrolledThePage() {
   var target = $('.circle')[targetIndex];
 
   $(target).addClass('full');
+}
+
+function countDown() {
+  var eventDate = new Date(2012, 08, 18, 9, 0, 0).getTime();
+  var now = new Date().getTime();
+  var secsLeft = Math.floor(eventDate - now) / 1000;
+  var daysLeft = Math.floor(secsLeft / 86400);
+  var hoursLeft = Math.floor((secsLeft % 86400) / 3600);
+  var minutesLeft = Math.floor(Math.floor(Math.floor(secsLeft % 86400) % 3600) / 60);
+  var secondsLeft = Math.floor(Math.floor(Math.floor(secsLeft % 86400) % 3600) % 60);
+
+  $('.days span').text(daysLeft + " ");
+  $('.hours span').text(hoursLeft + " ");
+  $('.min span').text(minutesLeft + " ");
+  $('.sec span').text(secondsLeft + " ");
 }

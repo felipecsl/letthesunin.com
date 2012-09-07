@@ -142,7 +142,7 @@ body {
   z-index: 2;
   position: fixed;
   bottom: 0;
-  height: 261px;
+  height: 208px;
   left: 0;
   right: 0;
   background: url(/images/footer.png) top center no-repeat;
@@ -159,14 +159,14 @@ body {
   #sunrise {
     text-shadow: -1px -1px #338AAC;
     position: relative;
-    top: 75px;
+    top: 30px;
     float: right;
     color: white;
     right: 0;
     p {
       font-size: 25px;
       margin: 0;
-      text-indent: 10px;
+      text-indent: 20px;
     }
     div {
       float: left;
@@ -222,7 +222,7 @@ body {
   background: url(/images/mobility.png) top center no-repeat fixed;
   background-size: cover;
   height: 648px;
-  margin-top: 95px;
+  margin-top: 75px;
   .mobility_content {
     position: relative;
     padding-top: 205px;
