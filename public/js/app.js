@@ -4,6 +4,17 @@ $(function() {
   $(".scramble").sortable({
      update: onWordSorted
   });
+
+  $('.circle').click(function() {
+    var targetSelector = $(this).data('target');
+    var offset = $(targetSelector).offset().top;
+    $('body').animate({ scrollTop: offset }, 300);
+  });
+
+  $(".arrow").click(function() {
+    $('.circle.full').next().click();
+  });
+
   $(".scramble img").disableSelection();
   
   $('.mobility_scramble, .cloud_scramble').balloon({ 

@@ -99,6 +99,7 @@ body {
   margin-right: -500px;
 
   .circle {
+    cursor: pointer;
     width: 10px;
     height: 10px;
     margin-bottom: 10px;
@@ -109,6 +110,7 @@ body {
     }
   }
   .arrow {
+    cursor: pointer;
     width: 29px;
     height: 29px;
     margin-bottom: 10px;
@@ -214,7 +216,8 @@ body {
   }
 }
 .mobility { 
-  background: url(/images/mobility.png) top center no-repeat;
+  background: url(/images/mobility.png) top center no-repeat fixed;
+  background-size: cover;
   height: 648px;
   margin-top: 95px;
   .mobility_content {
@@ -223,7 +226,8 @@ body {
   }
 }
 .context { 
-  background: url(/images/context.png) top center no-repeat;
+  background: url(/images/context.png) top center no-repeat fixed;
+  background-size: cover;
   height: 814px;
   .context_words {
     width: 660px;
@@ -233,7 +237,8 @@ body {
   }
 }
 .social { 
-  background: url(/images/social.png) top center no-repeat;
+  background: url(/images/social.png) top center no-repeat fixed;
+  background-size: cover;
   height: 811px;
   .social_words {
     width: 565px;
@@ -243,7 +248,8 @@ body {
   }
 }
 .collaboration { 
-  background: url(/images/collaboration.png) top center no-repeat;
+  background: url(/images/collaboration.png) top center no-repeat fixed;
+  background-size: cover;
   height: 790px;
   .collaboration_words {
     width: 875px;
@@ -256,7 +262,8 @@ body {
   }
 }
 .optimized{ 
-  background: url(/images/optimized.png) top center no-repeat;
+  background: url(/images/optimized.png) top center no-repeat fixed;
+  background-size: cover;
   height: 810px;
   .optimized_words {
     width: 855px;
@@ -266,7 +273,8 @@ body {
   }
 }
 .cloud{ 
-  background: url(/images/cloud.png) top center no-repeat;
+  background: url(/images/cloud.png) top center no-repeat fixed;
+  background-size: cover;
   height: 808px;
   .cloud_words {
     width: 776px;
@@ -276,7 +284,8 @@ body {
   }
 }
 .time{ 
-  background: url(/images/time.png) top center no-repeat;
+  background: url(/images/time.png) top center no-repeat fixed;
+  background-size: cover;
   height: 1001px;
 }
 
