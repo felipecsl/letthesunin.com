@@ -71,7 +71,7 @@ body {
 }
 .tip {
   background-color: #F1602F !important;
-  width: 240px;
+  width: 275px;
   height: 45px;
   border-radius: 13px !important;
   box-shadow: 0 5px 7px #888 !important;
@@ -84,12 +84,17 @@ body {
 .main {
   width: 950px;
   margin: 0 auto;
-  .scramble {
+  .scramble, .non_scramble {
     width: 770px;
     margin: 0 auto;
     img {
       cursor: pointer;
       margin-right: 5px;
+    }
+  }
+  .non_scramble {
+    img {
+      cursor: default;
     }
   }
 }
@@ -292,11 +297,17 @@ body {
     padding-top: 385px;
   }
 }
-.time{ 
+.time { 
   background: url(/images/time.png) top center no-repeat fixed;
   background-size: cover;
   height: 1001px;
   min-width: 950px;
+  .time_content { 
+    padding-top: 385px;
+  }
+  .time_words {
+    width: 925px;
+  }
 }
 
 .transp_message {

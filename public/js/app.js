@@ -26,27 +26,32 @@ $(function() {
   $('.mobility_scramble, .cloud_scramble').balloon({ 
     offsetX: -340,
     showAnimation: function(d) { this.fadeIn(d); },
-    classname: 'tip'
+    classname: 'tip',
+    hideAnimation: function(d) { }
   });
   $('.context_scramble').balloon({ 
     offsetX: -285,
     showAnimation: function(d) { this.fadeIn(d); },
-    classname: 'tip'
+    classname: 'tip',
+    hideAnimation: function(d) { }
   });
   $('.social_scramble').balloon({ 
     offsetX: -235,
     showAnimation: function(d) { this.fadeIn(d); },
-    classname: 'tip'
+    classname: 'tip',
+    hideAnimation: function(d) { }
   });
   $('.collaboration_scramble').balloon({ 
     offsetX: -405,
     showAnimation: function(d) { this.fadeIn(d); },
-    classname: 'tip'
+    classname: 'tip',
+    hideAnimation: function(d) { }
   });
   $('.optimized_scramble').balloon({ 
     offsetX: -385,
     showAnimation: function(d) { this.fadeIn(d); },
-    classname: 'tip'
+    classname: 'tip',
+    hideAnimation: function(d) { }
   });
 
   $(window).scroll(userScrolledThePage);
@@ -85,33 +90,42 @@ function userScrolledThePage() {
   var scrollTop = $('body').scrollTop() + $('#topmsg').height();
   var targetIndex = 0;
   var isLastImage = false;
+  var headerMessage = 'When the sun rises, desks and wires<br/> will give way to worldwide...';
 
   $('.circle').removeClass('full');
 
   if($('body').scrollTop() > pageBottom || scrollTop > $('.form').offset().top) {
     targetIndex = 7;
     isLastImage = true;
+    headerMessage = '<p style="margin-top: 18px;">Wake me up for the sunrise</p>';
   }
   else if(scrollTop > $('.time').offset().top) {
     targetIndex = 6;
+    headerMessage = 'When will the sun rise on your<br/> business? We say...';
   }
   else if(scrollTop > $('.cloud').offset().top) {
     targetIndex = 5;
+    headerMessage = "<p style=\"margin-top: 18px;\">When the sun rises, you'll see the power of...</p>";
   }
   else if(scrollTop > $('.optimized').offset().top) {
     targetIndex = 4;
+    headerMessage = "When the sun rises, profitability and customer<br/> satisfaction will soar, thanks to workforces that are...";
   }
   else if(scrollTop > $('.collaboration').offset().top) {
     targetIndex = 3;
+    headerMessage = "When the sun rises, the insight to perform<br/> better will come from peer-to-peer...";
   }
   else if(scrollTop > $('.social').offset().top) {
     targetIndex = 2;
+    headerMessage = "When the sun rises, everyone will<br/>  connect through networks that are...";
   }
   else if(scrollTop > $('.context').offset().top) {
     targetIndex = 1;
+    headerMessage = "When the sun rises, technology will<br/>  heighten your awareness of...";
   }
   else if(scrollTop > $('.mobility').offset().top) {
     targetIndex = 0;
+    headerMessage = "When the sun rises, desks and wires<br/> will give way to worldwide...";
   }
 
   if(!isAnimating) {
@@ -136,6 +150,7 @@ function userScrolledThePage() {
   var target = $('.circle')[targetIndex];
 
   $(target).addClass('full');
+  $('#topmsg').html(headerMessage);
 }
 
 function countDown() {
