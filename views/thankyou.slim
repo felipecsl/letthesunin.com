@@ -1,0 +1,42 @@
+doctype html
+html class="no-js" lang="en"
+  head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
+    title Dreamforce
+    meta name="description" content=""
+
+    meta name="viewport" content="width=device-width"
+    link rel="stylesheet" href="/css/thankyou.css"
+  body.thankyou
+    #topmsg 
+      | Thank you, your submission was successful. 
+      br/
+      | When the sun rises, please check your inbox.
+    #sunrise
+      p The Sun Will Rise in:
+      .days 
+        span 34 
+        | days
+      .hours 
+        span 10 
+        | hrs
+      .min 
+        span 20 
+        | min
+      .sec 
+        span 05 
+        | sec
+    
+    script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"
+    script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"
+    script src="/js/jquery.balloon.min.js"
+    script src="/js/underscore-min.js"
+    script src="/js/app.js"
+    
+    script
+      |
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
