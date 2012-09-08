@@ -311,9 +311,11 @@ body {
 }
 
 .transp_message {
-  background: url(/images/transp_bg.png) top center no-repeat;
-  width: 719px;
-  height: 119px;
+  border: 1px solid gray;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 690px;
+  height: 120px;
   margin: 10px auto;
   display: none;
   padding: 15px 30px;
@@ -321,6 +323,30 @@ body {
   font-size: 23px;
   line-height: 30px;
   text-shadow: 0 1px 1px #4D4D4D;
+}
+
+#context_msg {
+  width: 590px;
+}
+#social_msg {
+  width: 490px;
+  height: 100px;
+}
+#collaboration_msg {
+  width: 800px;
+  height: 70px;
+}
+#optimized_msg {
+  width: 770px;
+  height: 100px;
+}
+#cloud_msg {
+  width: 706px;
+  height: 100px;
+}
+#time_msg {
+  width: 840px;
+  height: 70px;
 }
 
 .form{ 
@@ -340,7 +366,8 @@ body {
       font-size: 18px;
     }
     input[type="text"] {
-      width: 205px;
+      padding: 5px 10px;
+      width: 188px;
       border-radius: 4px;
       border: 0 none;
       height: 25px;
@@ -356,6 +383,7 @@ body {
       border: 0 none;
       box-shadow: 0 1px 3px 1px #4B4848;
       font-size: 17px;
+      text-shadow: 0 1px 1px black;
     }
     .margin {
       margin-right: 35px;
@@ -375,6 +403,11 @@ body {
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .mobility, .context, .social, .collaboration, .optimized, .cloud, .time { 
+    background-attachment: scroll;
+  }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
   .mobility, .context, .social, .collaboration, .optimized, .cloud, .time { 
     background-attachment: scroll;
   }
