@@ -10,7 +10,7 @@ $(function() {
   $('.circle').click(function() {
     var targetSelector = $(this).data('target');
     var offset = $(targetSelector).offset().top;
-    $('body').animate({ scrollTop: offset }, 300);
+    $('body,html').animate({ scrollTop: offset }, 300); // workaround for Firefox http://stackoverflow.com/questions/8149155/animate-scrolltop-not-working-in-firefox
   });
 
   $(".btnWakeUp").click(function() {
@@ -23,34 +23,40 @@ $(function() {
 
   $(".scramble img").disableSelection();
   
-  $('.mobility_scramble, .cloud_scramble').balloon({ 
+  $('.mobility_scramble').balloon({ 
     offsetX: -340,
     showAnimation: function(d) { this.fadeIn(d); },
-    classname: 'tip',
+    classname: 'tip mobility_tip',
+    hideAnimation: function(d) { }
+  });
+  $('.cloud_scramble').balloon({ 
+    offsetX: -340,
+    showAnimation: function(d) { this.fadeIn(d); },
+    classname: 'tip cloud_tip',
     hideAnimation: function(d) { }
   });
   $('.context_scramble').balloon({ 
     offsetX: -285,
     showAnimation: function(d) { this.fadeIn(d); },
-    classname: 'tip',
+    classname: 'tip context_tip',
     hideAnimation: function(d) { }
   });
   $('.social_scramble').balloon({ 
     offsetX: -235,
     showAnimation: function(d) { this.fadeIn(d); },
-    classname: 'tip',
+    classname: 'tip social_tip',
     hideAnimation: function(d) { }
   });
   $('.collaboration_scramble').balloon({ 
     offsetX: -405,
     showAnimation: function(d) { this.fadeIn(d); },
-    classname: 'tip',
+    classname: 'tip collaboration_tip',
     hideAnimation: function(d) { }
   });
   $('.optimized_scramble').balloon({ 
     offsetX: -385,
     showAnimation: function(d) { this.fadeIn(d); },
-    classname: 'tip',
+    classname: 'tip optimized_tip',
     hideAnimation: function(d) { }
   });
 
@@ -70,6 +76,7 @@ function onWordSorted(event, ui) {
 
   if(isOrdered(indexes)) {
     $('#' + scramble.data('message')).fadeIn();
+    $('.' + scramble.data('tip')).fadeOut('normal', function() { $(this).remove(); });
   }
   else {
    $('#' + scramble.data('message')).fadeOut(); 
@@ -87,14 +94,14 @@ function isOrdered(array) {
 
 function userScrolledThePage() {
   var pageBottom = 5500;
-  var scrollTop = $('body').scrollTop() + $('#topmsg').height();
+  var scrollTop = $(document).scrollTop() + $('#topmsg').height();
   var targetIndex = 0;
   var isLastImage = false;
   var headerMessage = 'When the sun rises, desks and wires<br/> will give way to worldwide...';
 
   $('.circle').removeClass('full');
 
-  if($('body').scrollTop() > pageBottom || scrollTop > $('.form').offset().top) {
+  if($(document).scrollTop() > pageBottom || scrollTop > $('.form').offset().top) {
     targetIndex = 7;
     isLastImage = true;
     headerMessage = '<p style="margin-top: 18px;">Wake me up for the sunrise</p>';

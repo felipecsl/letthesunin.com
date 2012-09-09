@@ -78,7 +78,6 @@ body {
   color: white !important;
   padding: 5px 10px !important;
   border: 1px solid #E94913 !important;
-  text-align: center !important;
   z-index: 1 !important;
 }
 .main {
@@ -292,6 +291,9 @@ body {
   min-width: 950px;
   .cloud_words {
     width: 776px;
+    img:nth-child(3) {
+      margin-right: 30px;
+    }
   }
   .cloud_content {
     padding-top: 385px;
