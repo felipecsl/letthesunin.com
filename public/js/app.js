@@ -1,4 +1,4 @@
-var isAnimating = false;
+//var isAnimating = false;
 
 $(function() {
   $(".scramble").sortable({
@@ -135,24 +135,24 @@ function userScrolledThePage() {
     headerMessage = "When the sun rises, desks and wires<br/> will give way to worldwide...";
   }
 
-  if(!isAnimating) {
-    isAnimating = true;
+  // if(!isAnimating) {
+  //   isAnimating = true;
 
-    var bottomDistance;
-    if(isLastImage) {
-      bottomDistance = '-400px';
-    }
-    else {
-      bottomDistance = '0px';
-    }
+  //   var bottomDistance;
+  //   if(isLastImage) {
+  //     bottomDistance = '-400px';
+  //   }
+  //   else {
+  //     bottomDistance = '0px';
+  //   }
 
-    $('#footer').stop().animate(
-        { bottom: bottomDistance }, 
-        200, 
-        function() {
-          isAnimating = false;
-        });
-  }
+  //   $('#footer').stop().animate(
+  //       { bottom: bottomDistance }, 
+  //       200, 
+  //       function() {
+  //         isAnimating = false;
+  //       });
+  // }
 
   var target = $('.circle')[targetIndex];
 
