@@ -39,7 +39,7 @@ html class="no-js" lang="en"
           img src='/images/c.png' data-index='0' 
           img src='/images/t.png' data-index='3,6'
         #context_msg.transp_message
-          | By next year, half of all Fortune 500 companies will have context-aware technology initiatives - using immediate physical and social environments to enrich their customers experiences or their employees' work lives.
+          | By next year, half of all Fortune 500 companies will have context-aware technology initiatives - using immediate physical and social environments to enrich their customers' experiences or their employees' work lives.
     .social
       .main.social_content
         /.tip        
@@ -128,17 +128,17 @@ html class="no-js" lang="en"
           .form_line
             .form_field.margin
               label for="LeadGen_ContactForm_145605_m0:FirstName" First Name
-              input type="text" name="LeadGen_ContactForm_145605_m0:FirstName" value=""
+              input type="text" name="LeadGen_ContactForm_145605_m0:FirstName" value="" required="required"
             .form_field
               label for="LeadGen_ContactForm_145605_m0:LastName" Last Name
-              input type="text" name="LeadGen_ContactForm_145605_m0:LastName" value=""
+              input type="text" name="LeadGen_ContactForm_145605_m0:LastName" value="" required="required"
           .form_line
             .form_field.margin
               label for="LeadGen_ContactForm_145605_m0:Company" Company
-              input type="text" name="LeadGen_ContactForm_145605_m0:Company" value=""
+              input type="text" name="LeadGen_ContactForm_145605_m0:Company" value="" required="required"
             .form_field
               label for="LeadGen_ContactForm_145605_m0:Email" Email
-              input type="text" name="LeadGen_ContactForm_145605_m0:Email" value=""
+              input type="email" name="LeadGen_ContactForm_145605_m0:Email" value="" required="required"
           input.submit name='LeadGen_ContactForm_Submit_LeadGen_ContactForm_145605_m0' type="submit" value="Submit &#x25b6;" onclick='return HubSpotFormSpamCheck_LeadGen_ContactForm_145605_m0();'
     .progress
       .circle.full data-target=".mobility"
@@ -156,9 +156,6 @@ html class="no-js" lang="en"
         p Wake me up for the sunrise
         a.btnWakeUp href="#" Click Here &#x25b6;
       .main
-        #about_time
-          | It's about 
-          strong time.
         #sunrise
           p The Sun Will Rise In:
           .days 

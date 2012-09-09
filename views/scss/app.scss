@@ -146,10 +146,10 @@ body {
   z-index: 2;
   position: fixed;
   bottom: 0;
-  height: 208px;
+  height: 215px;
   left: 0;
   right: 0;
-  background: url(/images/footer.png) top center no-repeat;
+  background: url(/images/footer.jpg) top center no-repeat;
 
   #about_time {
     float: left;
@@ -217,7 +217,7 @@ body {
     position: relative;
     left: 50%;
     margin-left: -280px;
-    top: -55px;
+    top: -36px;
     border-radius: 10px;
     box-shadow: 0 3px 3px #555;
     background-color: white;
@@ -368,7 +368,7 @@ body {
       margin-bottom: 4px;
       font-size: 18px;
     }
-    input[type="text"] {
+    input[type="text"], input[type="email"] {
       padding: 5px 10px;
       width: 188px;
       border-radius: 4px;
