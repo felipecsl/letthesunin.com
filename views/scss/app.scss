@@ -154,7 +154,7 @@ body {
   #about_time {
     float: left;
     position: relative;
-    top: 80px;
+    top: 40px;
     left: 25px;
     color: #0079c2;
     font-size: 25px;
@@ -163,7 +163,7 @@ body {
   #sunrise {
     text-shadow: -1px -1px #338AAC;
     position: relative;
-    top: 30px;
+    top: 40px;
     float: right;
     color: white;
     right: 0;
@@ -180,12 +180,13 @@ body {
       text-align: center;
       border-right: 1px solid white;
       padding: 0 7px;
+      line-height: 25px;
       &:last-child {
         border-right: 0 none;
       }
       span {
-        font-size: 40px;
-        line-height: 40px;
+        font-size: 30px;
+        line-height: 30px;
       }
     }
   }
