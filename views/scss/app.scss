@@ -71,7 +71,7 @@ body {
 }
 .tip {
   background-color: #F1602F !important;
-  width: 275px;
+  width: 225px;
   height: 45px;
   border-radius: 13px !important;
   box-shadow: 0 5px 7px #888 !important;
@@ -80,11 +80,32 @@ body {
   border: 1px solid #E94913 !important;
   z-index: 1 !important;
 }
+.solve { 
+  float: right;
+  display: block;
+  width: 70px;
+  background-color: #1E9AD6;
+  color: white;
+  border-radius: 7px;
+  padding: 4px 6px;
+  border: 0 none;
+  box-shadow: 0 1px 3px 0px #4B4848;
+  font-size: 17px;
+  text-shadow: 0 1px 1px black;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  &:hover {
+    color: #eee;
+  }
+}
 .main {
   width: 950px;
   margin: 0 auto;
   .scramble, .non_scramble {
-    width: 770px;
+    width: 760px;
     margin: 0 auto;
     img {
       cursor: pointer;
@@ -278,7 +299,7 @@ body {
   height: 810px;
   min-width: 950px;
   .optimized_words {
-    width: 855px;
+    width: 850px;
   }
   .optimized_content {
     padding-top: 200px;
@@ -290,7 +311,7 @@ body {
   height: 808px;
   min-width: 950px;
   .cloud_words {
-    width: 776px;
+    width: 780px;
     img:nth-child(3) {
       margin-right: 30px;
     }
@@ -383,7 +404,7 @@ body {
       border-radius: 7px;
       padding: 7px 12px;
       border: 0 none;
-      box-shadow: 0 1px 3px 1px #4B4848;
+      box-shadow: 0 1px 3px 0px #4B4848;
       font-size: 17px;
       text-shadow: 0 1px 1px black;
     }

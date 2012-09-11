@@ -87,7 +87,7 @@ body {
 #sunrise {
   width: 500px;
   background-color: white;
-  margin: 350px auto;
+  margin: 350px auto 0;
   border-radius: 6px;
   box-shadow: 3px 4px 15px 0px #141414;
   overflow: auto;
@@ -119,6 +119,21 @@ body {
       line-height: 70px;
     }
   }
+}
+#btnHome {
+  margin: 30px auto;
+  display: block;
+  width: 70px;
+  background-color: #7BC143;
+  color: white;
+  border-radius: 7px;
+  padding: 7px 12px;
+  border: 0 none;
+  box-shadow: 0 1px 3px 0px #4B4848;
+  font-size: 17px;
+  text-shadow: 0 1px 1px black;
+  text-decoration: none;
+  text-align: center;
 }
 /***** CONTENT CSS ******/
 

@@ -21,6 +21,18 @@ $(function() {
     $('.circle.full').next().click();
   });
 
+  $('.solve').click(function() {
+    var solveBtn = $(this);
+    var scramble = solveBtn.parent();
+    var images = scramble.find('img');
+    var sortedImages = _.sortBy(images, function(img) { return getLetterIndex(img); });
+    scramble.remove("img").prepend(sortedImages);
+    solveBtn.fadeOut(function() {
+      solveBtn.remove();
+    });
+    onWordSorted.call(scramble);
+  });
+
   $(".scramble img").disableSelection();
   
   $('.mobility_scramble').balloon({ 
@@ -90,6 +102,10 @@ function isOrdered(array) {
     }
   }
   return true;
+}
+
+function getLetterIndex(image) {
+  return parseInt($(image).data("index").toString().split(',')[0]);
 }
 
 function userScrolledThePage() {
